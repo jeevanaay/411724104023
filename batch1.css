@@ -1,7 +1,7 @@
 body{
     color: purple;
     background-color: beige;
-    font-family: 'Times New Roman', Times, serif';
+    font-family: 'Times New Roman', Times, serif;
 }
 p{
     font-style: italic;
@@ -11,8 +11,15 @@ img{
     width: 500px;
     border-radius: 100px;
 }
+@media(max-width: 600px){
+   img{
+    height: auto;
+    width: 100%;
+   } 
+}
 video{
-    height: 500px;
+    /* height: auto; */
+    width:100%;
 }
 ol{
     list-style-type: upper-roman;
@@ -40,4 +47,40 @@ nav{
     display: flex;
     flex-direction: row;
     gap: 50px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* #x{
+    grid-row: 1/2;
+}
+#y{
+    grid-row: 1/2;
+}
+#z{
+    grid-row: 1/2;
+}
+#a{
+    grid-row: 2/3;
+}
+#b{
+    grid-row: 2/3;
+}
+#c{
+    grid-row: 2/3;
+} */
+@media(min-width: 768px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+@media(min-width: 1024px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
 }
